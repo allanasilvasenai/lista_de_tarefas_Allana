@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+    <h1>Lista de Tarefas</h1>
+    <h3>Meu dia no sábado:</h3>
+
+    <script>
+        let minhaAgenda = ["\n 8h - Acordar, escovar os dentes, tomar um banho", "\n 9h - Entrando no trabalho", "\n 13h - Saindo do trabalho, chegando em casa", "\n 13h30 - Almoço, banho", "\n 14h30 - Limpar a casa", "\n 16h - Estudos", "\n 18h - Fim dos estudos, banho", "\n 19h - Jantar, fazer exercícios em casa", "\n 23h30 - Dormir"];
+
+        let quantidadeTarefas = minhaAgenda.length
+        console.log(`Você tem ${quantidadeTarefas} tarefas pendentes.`)
+
+        minhaAgenda.push("\n 17h - Pausa para lanchar");     
+        console.log(`A tarefa ${minhaAgenda[4]}, é urgente.`);
+
+        minhaAgenda.sort();
+        console.log(`Minha agenda organizada: ${minhaAgenda}.`);
+
+        minhaAgenda.shift("8h - Acordar, escovar os dentes, tomar banho");
+        console.log(`Já concluí, vamos remover a tarefa: ${minhaAgenda[1]}`);
+
+        minhaAgenda.pop("23h30 - Dormir");
+        console.log(`Tenho outras coisas para fazer, Não irei ir às: ${minhaAgenda[6]}`);
+
+        minhaAgenda.splice(3);
+        console.log(`Remover item: ${minhaAgenda}`);
+    </script>
+</body>
+</html>
